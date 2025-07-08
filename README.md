@@ -14,7 +14,7 @@ Este proyecto implementa un sistema de fidelización para una cadena de tiendas 
 
 ---
 
-## 🧩 Diagrama de clases UML
+## Diagrama de clases UML
 
 ![UML](docs/uml.png)
 
