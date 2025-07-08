@@ -1,12 +1,14 @@
 package com.fidelidad;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Scanner;
 
 public class App {
 
     private static final Scanner scanner = new Scanner(System.in);
     private static final ClienteRepository clienteRepo = new ClienteRepository();
+    private static final CompraRepository compraRepo = new CompraRepository();
     private static final FidelidadService fidelidadService = new FidelidadService(clienteRepo);
 
     public static void main(String[] args) {
@@ -111,9 +113,23 @@ public class App {
 
     // -------------------------
     // SUBMENÚ COMPRAS
-
     private static void menuCompras() {
-        System.out.println("\n--- Registrar Compra ---");
+        System.out.println("\n--- Gestión de Compras ---");
+        System.out.println("1. Registrar compra");
+        System.out.println("2. Listar compras");
+        System.out.println("3. Eliminar compra");
+        System.out.print("Seleccione una opción: ");
+        String opcion = scanner.nextLine();
+
+        switch (opcion) {
+            case "1" -> registrarCompra();
+            case "2" -> listarCompras();
+            case "3" -> eliminarCompra();
+            default -> System.out.println("Opción inválida.");
+        }
+    }
+
+    private static void registrarCompra() {
         System.out.print("ID Compra: ");
         String idCompra = scanner.nextLine();
         System.out.print("ID Cliente: ");
@@ -125,15 +141,41 @@ public class App {
         Compra compra = new Compra(idCompra, idCliente, monto, fecha);
         try {
             fidelidadService.registrarCompra(compra);
+            compraRepo.agregar(compra); // almacenar en histórico
             System.out.println("Compra registrada correctamente.");
         } catch (IllegalArgumentException e) {
             System.out.println("Error: " + e.getMessage());
         }
     }
 
+    private static void listarCompras() {
+        System.out.print("ID Cliente (opcional): ");
+        String id = scanner.nextLine();
+
+        List<Compra> compras = id.isBlank()
+                ? compraRepo.listar()
+                : compraRepo.listarPorCliente(id);
+
+        if (compras.isEmpty()) {
+        System.out.println("No se encontraron compras.");
+        return;
+        }   
+
+        for (Compra c : compras) {
+            System.out.printf("- [%s] Cliente: %s | Monto: %.2f | Fecha: %s\n",
+                    c.getIdCompra(), c.getIdCliente(), c.getMonto(), c.getFecha());
+        }
+    }
+
+    private static void eliminarCompra() {
+        System.out.print("ID de compra a eliminar: ");
+        String id = scanner.nextLine();
+        compraRepo.eliminar(id);
+        System.out.println("Compra eliminada.");
+    }
+
     // -------------------------
     // MOSTRAR PUNTOS Y NIVEL
-
     private static void mostrarPuntosYNivel() {
         System.out.print("ID del cliente: ");
         String id = scanner.nextLine();
