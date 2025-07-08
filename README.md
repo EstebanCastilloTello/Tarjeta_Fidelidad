@@ -6,11 +6,11 @@ Este proyecto implementa un sistema de fidelización para una cadena de tiendas 
 
 ## Funcionalidades
 
-- 👤 Gestión completa de clientes (crear, listar, actualizar, eliminar)
-- 💳 Registro y seguimiento de compras
-- ⭐ Acumulación de puntos con bonus por fidelidad
-- 🏆 Sistema de niveles: Bronce, Plata, Oro y Platino
-- 📊 Interfaz de consola con menús interactivos
+- Gestión completa de clientes (crear, listar, actualizar, eliminar)
+- Registro y seguimiento de compras
+- Acumulación de puntos con bonus por fidelidad
+- Sistema de niveles: Bronce, Plata, Oro y Platino
+- Interfaz de consola con menús interactivos
 
 ---
 
@@ -44,7 +44,7 @@ MIT License
 
 ---
 
-# 🚀 Instrucciones de compilación y ejecución
+# Instrucciones de compilación y ejecución
 
 ## Requisitos previos
 
@@ -95,7 +95,7 @@ Luego abre el archivo `target/site/jacoco/index.html` en un navegador web, para 
 
 ---
 
-# 📊 ¿Qué tipo de cobertura he medido y por qué?
+# ¿Qué tipo de cobertura he medido y por qué?
 
 Utilicé **JaCoCo** para medir cobertura de código (**Code Coverage**) en dos aspectos principales:
 
