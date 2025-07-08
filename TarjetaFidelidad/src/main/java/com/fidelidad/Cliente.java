@@ -2,8 +2,8 @@ package com.fidelidad;
 
 public class Cliente {
     private final String id;
-    private final String nombre;
-    private final String correo;
+    private String nombre;
+    private String correo;
     private int puntos;
     private NivelFidelidad nivel;
     private int streakDias;
@@ -30,4 +30,15 @@ public class Cliente {
     public void setPuntos(int puntos) { this.puntos = puntos; }
     public void setNivel(NivelFidelidad nivel) { this.nivel = nivel; }
     public void setStreakDias(int streak) { this.streakDias = streak; }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setCorreo(String correo) {
+        if (!correo.contains("@")) {
+            throw new IllegalArgumentException("Correo inválido");
+        }
+        this.correo = correo;
+    }
 }
