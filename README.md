@@ -1,23 +1,78 @@
-# Tarjeta de Fidelidad Gamificada
+# 🎮 Tarjeta de Fidelidad Gamificada
 
-Este proyecto implementa un sistema de fidelización por consola en Java. Los clientes acumulan puntos por compras y suben de nivel (Bronce, Plata, Oro, Platino).
+Este proyecto implementa un sistema de fidelización para una cadena de tiendas de conveniencia. A través de una interfaz de línea de comandos, permite gestionar clientes, registrar compras, acumular puntos y subir de nivel según reglas de negocio definidas.
 
-## Funcionalidades
-- Gestión de clientes (CRUD)
-- Registro de compras y asignación de puntos
-- Bonificaciones por compras seguidas
-- Niveles de fidelidad automáticos
-- Interfaz de línea de comandos (CLI)
-- Pruebas unitarias con JUnit 5
-- Medición de cobertura con JaCoCo
+---
 
-## Requisitos
+## ✅ Funcionalidades
+
+- 👤 Gestión completa de clientes (crear, listar, actualizar, eliminar)
+- 💳 Registro y seguimiento de compras
+- ⭐ Acumulación de puntos con bonus por fidelidad
+- 🏆 Sistema de niveles: Bronce, Plata, Oro y Platino
+- 📊 Interfaz de consola con menús interactivos
+
+---
+
+# 🚀 Instrucciones de compilación y ejecución
+
+## Requisitos previos
+
 - Java 21+
-- Maven
-- Git
+- Maven 3.8+
 
-## Compilación y ejecución
+---
+
+## Entra a la carpeta principal
 
 ```bash
-mvn clean compile
-mvn exec:java -Dexec.mainClass="fidelidad.App"
+cd TarjetaFidelidad
+```
+
+---
+
+## Compilar el proyecto
+
+```bash
+mvn compile
+```
+
+---
+
+## Ejecutar la aplicación
+
+```bash
+mvn exec:java
+```
+
+---
+
+## Ejecutar los tests
+
+```bash
+mvn test
+```
+
+---
+
+## Ver reporte de cobertura
+
+```bash
+mvn verify
+```
+
+Luego abre el archivo `target/site/jacoco/index.html` en un navegador web, para ver el reporte visual.
+
+---
+
+# 📊 ¿Qué tipo de cobertura he medido y por qué?
+
+Utilicé **JaCoCo** para medir cobertura de código (**Code Coverage**) en dos aspectos principales:
+
+- **Cobertura de líneas de código**: Asegura que la mayor parte de la lógica relevante del sistema es ejecutada durante las pruebas.
+- **Cobertura de ramas**: Verifica que las diferentes condiciones y bifurcaciones lógicas son testeadas.
+
+Esto es importante para garantizar la calidad y robustez del software, identificando posibles caminos no cubiertos y mejorando la confiabilidad general.
+
+En mi reporte JaCoCo, la cobertura fue del **42% de líneas** y **21% de ramas**, esta cobertura baja se debe principalmente al código de consola no cubierto.
+
