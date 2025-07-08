@@ -1,5 +1,6 @@
-com/fidelidad/Cliente.class
+com/fidelidad/CompraRepository.class
 com/fidelidad/ClienteRepository.class
+com/fidelidad/Cliente.class
 com/fidelidad/FidelidadService.class
 com/fidelidad/Compra.class
 com/fidelidad/NivelFidelidad.class
