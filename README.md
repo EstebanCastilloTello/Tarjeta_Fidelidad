@@ -1,16 +1,46 @@
-# 🎮 Tarjeta de Fidelidad Gamificada
+# Tarjeta de Fidelidad Gamificada
 
 Este proyecto implementa un sistema de fidelización para una cadena de tiendas de conveniencia. A través de una interfaz de línea de comandos, permite gestionar clientes, registrar compras, acumular puntos y subir de nivel según reglas de negocio definidas.
 
 ---
 
-## ✅ Funcionalidades
+## Funcionalidades
 
 - 👤 Gestión completa de clientes (crear, listar, actualizar, eliminar)
 - 💳 Registro y seguimiento de compras
 - ⭐ Acumulación de puntos con bonus por fidelidad
 - 🏆 Sistema de niveles: Bronce, Plata, Oro y Platino
 - 📊 Interfaz de consola con menús interactivos
+
+---
+
+## Ejemplo de salida de tests
+
+```bash
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.fidelidad.ClienteRepositoryTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+[INFO] Running com.fidelidad.ClienteTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] Running com.fidelidad.CompraRepositoryTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+[INFO] Running com.fidelidad.FidelidadServiceTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] Running com.fidelidad.NivelFidelidadTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] Results:
+[INFO]
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0
+```
+
+---
+
+## Licencia
+MIT License
+(c) 2025 Esteban Castillo
 
 ---
 
