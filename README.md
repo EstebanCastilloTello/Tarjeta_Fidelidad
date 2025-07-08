@@ -14,6 +14,12 @@ Este proyecto implementa un sistema de fidelización para una cadena de tiendas 
 
 ---
 
+## 🧩 Diagrama de clases UML
+
+![UML](docs/uml.png)
+
+---
+
 ## Ejemplo de salida de tests
 
 ```bash
