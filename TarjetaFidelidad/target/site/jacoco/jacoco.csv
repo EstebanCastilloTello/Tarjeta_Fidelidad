@@ -1,0 +1,7 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+TarjetaFidelidad,com.fidelidad,Cliente,4,56,0,2,1,18,1,10,1,9
+TarjetaFidelidad,com.fidelidad,NivelFidelidad,2,82,2,4,1,13,2,5,0,4
+TarjetaFidelidad,com.fidelidad,ClienteRepository,21,22,0,0,5,5,3,3,3,3
+TarjetaFidelidad,com.fidelidad,Compra,3,24,0,0,1,9,1,4,1,4
+TarjetaFidelidad,com.fidelidad,App,7,0,0,0,3,0,2,0,2,0
+TarjetaFidelidad,com.fidelidad,FidelidadService,5,91,1,3,0,21,1,4,0,3

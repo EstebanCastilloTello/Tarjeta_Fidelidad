@@ -29,4 +29,16 @@ public class FidelidadServiceTest {
         assertEquals(2, c.getPuntos()); // 250/100 = 2 (redondeo hacia abajo)
         assertEquals(NivelFidelidad.BRONCE, c.getNivel());
     }
+    @Test
+    void clienteRecibeBonusPor3ComprasElMismoDia() {
+        LocalDate hoy = LocalDate.of(2025, 7, 8);
+
+        fidelidad.registrarCompra(new Compra("c1", "1", 100, hoy));
+        fidelidad.registrarCompra(new Compra("c2", "1", 100, hoy));
+        fidelidad.registrarCompra(new Compra("c3", "1", 100, hoy)); // Esta debería activar el bonus
+
+        Cliente c = clienteRepo.buscar("1");
+        // 3 compras = 3 puntos base + 10 bonus
+        assertEquals(13, c.getPuntos());
+    }
 }
